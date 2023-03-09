@@ -78,7 +78,7 @@ export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
 
 # tab titles
-zinit light trystan2k/zsh-tab-title
+# zinit light trystan2k/zsh-tab-title
 
 # dotfiles alias 
 alias dotfiles= '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -87,3 +87,24 @@ alias dotfiles= '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 zinit light zdharma-continuum/fast-syntax-highlighting
 alias config='/usr/bin/git --git-dir=/home/jakub/.cfg/ --work-tree=/home/jakub'
 alias config='/usr/bin/git --git-dir=/home/jakub/.dotfiles/ --work-tree=/home/jakub'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# deno 
+export DENO_INSTALL="/home/jakub/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+#GOPATH
+export PATH=$PATH:/usr/local/go/bin
+
+# bin PATH
+export PATH=$PATH:$HOME/.local/bin
+
+# asdf for pyur
+. "$HOME/.asdf/asdf.sh"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit

@@ -143,3 +143,4 @@ if [ -f '/home/jakub/google-cloud-cli-395.0.0-linux-x86_64/google-cloud-sdk/comp
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
 
+. "$HOME/.cargo/env"
